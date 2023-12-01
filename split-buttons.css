@@ -1,0 +1,78 @@
+/*---Split Button---*/
+
+.stadium-split-button {
+    padding-right: 16px;
+
+    & .button-container {
+
+        padding-right: 0;
+        display: flex;
+        flex-direction: row;
+        align-items: stretch;
+        justify-items: stretch;
+        box-shadow: var(--stadium-split-button-box-shadow);
+        background-color: var(--stadium-split-button-background-color);
+        border-radius: 3px;
+
+        & :hover:not(.split-option) {
+            box-shadow: var(--stadium-split-button-hover-box-shadow);
+        }
+
+        & button {
+            box-shadow: none;
+            border-right: 1px solid var(--stadium-split-button-separator-line-color);
+        }
+    }
+
+    & .right-button {
+        background-image: var(--stadium-split-button-icon);
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 16px;
+        border-color: var(--stadium-split-button-border-color);
+        padding-right: 20px;
+        cursor: pointer;
+        border-top-right-radius: 3px;
+        border-bottom-right-radius: 3px;
+        position: relative;
+    }
+
+    & .right-button:hover {
+        background-color: var(--stadium-split-button-hover-background-color);
+    }
+
+    & .split-options {
+        position: absolute;
+        top: 96%;
+        width: fit-content;
+        text-wrap: nowrap;
+        left: calc(100% - 20px);
+        display: none;
+        background-color: var(--stadium-split-button-options-background-color);
+        border-radius: 3px;
+        flex-direction: column;
+        padding: 6px 0;
+        border-bottom-right-radius: 6px;
+        border-bottom-left-radius: 6px;
+        border-top-right-radius: 6px;
+
+    }
+
+    & .split-option {
+        cursor: pointer;
+        padding: 4px 8px;
+    }
+
+    & .split-option:hover {
+        background-color: var(--stadium-split-button-options-hover-background-color);
+    }
+
+    & .drop-down-container {
+        display: none;
+    }
+}
+
+.stadium-split-button.expanded .split-options {
+    box-shadow: var(--stadium-split-button-options-box-shadow);
+    display: flex;
+}
