@@ -16,7 +16,6 @@ In complex applications, it is easy to overwhelm users with a large number of op
 4. Add the Javascript below into the JavaScript code property (ignore the validation error message "Invalid script was detected")
 ```javascript
 /*Stadium Script Version 1.0*/
-
 initSplitButtons();
 function initSplitButtons() {
     let splitbuttons = document.querySelectorAll(".stadium-split-button");
@@ -34,14 +33,20 @@ function initSplitButtons() {
             option.addEventListener("click", showSplitButton);
             ddContainer.appendChild(option);
         }
-        let rightButton = document.createElement("div");
-        rightButton.classList.add("right-button");
-        rightButton.addEventListener("click", function (e) {
-            if (!e.target.parentNode.closest(".split-options")) e.target.closest(".stadium-split-button").classList.toggle("expanded");
-        });
+        let rightButton = splitbuttons[i].querySelector(".right-button");
+        if (!rightButton) {
+            rightButton = document.createElement("div");
+            rightButton.classList.add("right-button");
+            rightButton.addEventListener("click", function (e) {
+                if (!e.target.parentNode.closest(".split-options")) e.target.closest(".stadium-split-button").classList.toggle("expanded");
+            });
+            btnContainer.appendChild(rightButton);
+        }
+        if (splitbuttons[i].querySelector(".split-options")) {
+            splitbuttons[i].querySelector(".split-options").remove();
+        }
         rightButton.appendChild(ddContainer);
         btn.addEventListener("click", closeSplitButton);
-        btnContainer.appendChild(rightButton);
         document.body.addEventListener("click", closeSplitButtons);
     }
 }
