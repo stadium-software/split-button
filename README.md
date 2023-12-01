@@ -13,7 +13,7 @@ In complex applications, it is easy to overwhelm users with a large number of op
 ## Global Script Setup
 1. Create a Global Script called "SplitButtons"
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property (ignore the validation error message "Invalid script was detected")
+4. Add the Javascript below into the JavaScript code property
 ```javascript
 /*Stadium Script Version 1.0*/
 initSplitButtons();
