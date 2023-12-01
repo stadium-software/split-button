@@ -73,16 +73,18 @@ function closeSplitButton(e) {
 ```
 
 ## Page Setup
-1. Drag a *Container* control into the page and add a class called "stadium-split-button" into the classes property
-2. Drag a *Button* control into the *Container* control
-3. Add any text you wish into the button  text property
-4. Drag a *DropDown* control and place it into the *Container* control to the right of the *Button* control
-5. Add any *Options* you wish to the *DropDown* control or assign options using a script
+1. Drag a *Container* control into the page 
+2. Add a class called "stadium-split-button" into the *Container* classes property
+3. Drag a *Button* control into the *Container* control
+4. Add the text you wish to show on the button into the button text property
+5. Drag a *DropDown* control and place it into the *Container* control to the right of the *Button* control
+6. Add the *Options* you wish in the split button to the *DropDown* control or assign options using a script
 
 ![](images/SplitButtonControls.png)
 
 ## Page.Load Event Setup
 1. Drag the global script called "SplitButtons" into the Page.Load event handler
+2. Place the script after the actions that populate the dropdown with dynamic values
 
 # Styling
 Various elements in this module can be styled using the two CSS files in this repo
