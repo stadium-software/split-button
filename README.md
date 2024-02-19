@@ -17,7 +17,7 @@ https://github.com/stadium-software/split-button/assets/2085324/2729d416-e90e-4d
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/*Stadium Script Version 1.0*/
+/* Stadium Script Version 1.0 https://github.com/stadium-software/split-button */
 initSplitButtons();
 function initSplitButtons() {
     let splitbuttons = document.querySelectorAll(".stadium-split-button");
