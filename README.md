@@ -2,10 +2,10 @@
 
 In complex applications, it is easy to overwhelm users with a large number of options and controls. Split buttons reduce visual complexity by grouping similar actions together. Use Split Buttons when you want users to choose between multiple related actions, one of which is most frequently used. 
 
-https://github.com/stadium-software/split-button/assets/2085324/2729d416-e90e-4d77-8b84-b819ea50be10
+
 
 ## Version 
-1.0 - initial
+1.1 - [Added display option under dropdown via additional class](#display-options)
 
 # Setup
 
@@ -17,7 +17,7 @@ https://github.com/stadium-software/split-button/assets/2085324/2729d416-e90e-4d
 3. Drag a *JavaScript* action into the script
 4. Add the Javascript below into the JavaScript code property
 ```javascript
-/* Stadium Script Version 1.0 https://github.com/stadium-software/split-button */
+/* Stadium Script Version 1.1 https://github.com/stadium-software/split-button */
 initSplitButtons();
 function initSplitButtons() {
     let splitbuttons = document.querySelectorAll(".stadium-split-button");
@@ -27,6 +27,10 @@ function initSplitButtons() {
         let options = splitbuttons[i].querySelectorAll(".drop-down-container select option");
         let ddContainer = document.createElement("div");
         ddContainer.classList.add("split-options");
+        if (splitbuttons[i].classList.contains("display-under")) {
+            ddContainer.style.left = "unset";
+            ddContainer.style.right = "0";
+        }
         for (let j = 0; j < options.length; j++) {
             let option = document.createElement("div");
             option.classList.add("split-option");
@@ -85,6 +89,9 @@ function closeSplitButton(e) {
 ## Page.Load Event Setup
 1. Drag the global script called "SplitButtons" into the Page.Load event handler
 2. Place the script after the actions that populate the dropdown with dynamic values
+
+## Display Options
+By default the dropdown will display to the right of the button. Adding the class "display-under" to the *Container* control will cause the dropdown to appear below the button. 
 
 ## Applying the CSS
 The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
