@@ -2,7 +2,7 @@
 
 In complex applications, it is easy to overwhelm users with a large number of options and controls. Split buttons reduce visual complexity by grouping similar actions together. Use Split Buttons when you want users to choose between multiple related actions, one of which is most frequently used. 
 
-
+https://github.com/stadium-software/split-button/assets/2085324/a666038d-8107-4aaf-9838-826a5e4fb9f6
 
 ## Version 
 1.1 - [Added display option under dropdown via additional class](#display-options)
