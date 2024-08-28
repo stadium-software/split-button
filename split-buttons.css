@@ -2,33 +2,33 @@
 .stadium-split-button {
     padding-right: 16px;
 
-    & .button-container {
+    .button-container {
 
         padding-right: 0;
         display: flex;
         flex-direction: row;
         align-items: stretch;
         justify-items: stretch;
-        box-shadow: var(--stadium-split-button-box-shadow);
-        background-color: var(--stadium-split-button-background-color);
+        box-shadow: var(--stadium-split-button-box-shadow, var(--BUTTON-BOX-SHADOW));
+        background-color: var(--stadium-split-button-background-color, var(--BUTTON-BACKGROUND-COLOR));
         border-radius: 3px;
 
-        & :hover:not(.split-option) {
-            box-shadow: var(--stadium-split-button-hover-box-shadow);
+        :hover:not(.split-option) {
+            box-shadow: var(--stadium-split-button-hover-box-shadow, var(--BUTTON-HOVER-BOX-SHADOW));
         }
 
-        & button {
+        button {
             box-shadow: none;
-            border-right: 1px solid var(--stadium-split-button-separator-line-color);
+            border-right: 1px solid var(--stadium-split-button-separator-line-color, var(--BODY-BACKGROUND-COLOR));
         }
     }
 
-    & .right-button {
-        background-image: var(--stadium-split-button-icon);
+    .right-button {
+        background-image: var(--stadium-split-button-icon, url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im0yNCAxMmwtOCAxMGwtOC0xMHoiLz48L3N2Zz4='));
         background-repeat: no-repeat;
         background-position: center;
         background-size: 16px;
-        border-color: var(--stadium-split-button-border-color);
+        border-color: var(--stadium-split-button-border-color, var(--BUTTON-BORDER-COLOR));
         padding-right: 20px;
         cursor: pointer;
         border-top-right-radius: 3px;
@@ -36,18 +36,18 @@
         position: relative;
     }
 
-    & .right-button:hover {
-        background-color: var(--stadium-split-button-hover-background-color);
+    .right-button:hover {
+        background-color: var(--stadium-split-button-hover-background-color, var(--BUTTON-HOVER-BACKGROUND-COLOR));
     }
 
-    & .split-options {
+    .split-options {
         position: absolute;
         top: 96%;
         width: fit-content;
         text-wrap: nowrap;
         left: calc(100% - 20px);
         display: none;
-        background-color: var(--stadium-split-button-options-background-color);
+        background-color: var(--stadium-split-button-options-background-color, var(--LIGHT-GREY));
         border-radius: 3px;
         flex-direction: column;
         padding: 6px 0;
@@ -57,21 +57,21 @@
 
     }
 
-    & .split-option {
+    .split-option {
         cursor: pointer;
         padding: 4px 8px;
     }
 
-    & .split-option:hover {
-        background-color: var(--stadium-split-button-options-hover-background-color);
+    .split-option:hover {
+        background-color: var(--stadium-split-button-options-hover-background-color, var(--LIGHT-GREY));
     }
 
-    & .drop-down-container {
+    .drop-down-container {
         display: none;
     }
 }
 
 .stadium-split-button.expanded .split-options {
-    box-shadow: var(--stadium-split-button-options-box-shadow);
+    box-shadow: var(--stadium-split-button-options-box-shadow, var(--BUTTON-HOVER-BOX-SHADOW));
     display: flex;
 }
