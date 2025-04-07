@@ -88,9 +88,6 @@ function closeSplitButton(e) {
 1. Drag the global script called "SplitButtons" into the Page.Load event handler
 2. Place the script after the actions that populate the dropdown with dynamic values
 
-## Display Options
-By default the dropdown will display to the right of the button. Adding the class "display-under" to the *Container* control will cause the dropdown to appear below the button. 
-
 ## Applying the CSS
 The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
 
