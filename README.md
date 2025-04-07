@@ -88,10 +88,10 @@ function closeSplitButton(e) {
 1. Drag the global script called "SplitButtons" into the Page.Load event handler
 2. Place the script after the actions that populate the dropdown with dynamic values
 
-## Applying the CSS
-The CSS below is required for the correct functioning of the module. Some elements can be [customised](#customising-css) using a variables CSS file. 
+## CSS
+The CSS below is required for the correct functioning of the module. Variables exposed in the [*split-buttons-variables.css*](split-buttons-variables.css) file can be [customised](#customising-css).
 
-**Stadium 6.6 or higher**
+### Before v6.12
 1. Create a folder called "CSS" inside of your Embedded Files in your application
 2. Drag the two CSS files from this repo [*split-buttons-variables.css*](split-buttons-variables.css) and [*split-buttons.css*](split-buttons.css) into that folder
 3. Paste the link tags below into the *head* property of your application
@@ -100,16 +100,28 @@ The CSS below is required for the correct functioning of the module. Some elemen
 <link rel="stylesheet" href="{EmbeddedFiles}/CSS/split-buttons-variables.css">
 ``` 
 
-![](images/ApplicationHeadProp.png)
+### v6.12+
+1. Create a folder called "CSS" inside of your Embedded Files in your application
+2. Drag the CSS files from this repo [*split-buttons.css*](split-buttons.css) into that folder
+3. Paste the link tag below into the *head* property of your application
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/split-buttons.css">
+``` 
 
-**Versions lower than 6.6**
-1. Copy the CSS from the two css files into the Stylesheet in your application
-
-## Customising CSS
+### Customising CSS
 1. Open the CSS file called [*split-buttons-variables.css*](split-buttons-variables.css) from this repo
 2. Adjust the variables in the *:root* element as you see fit
-3. Overwrite the file in the CSS folder of your application with the customised file
-4. Do not change any CSS other than the variables provided in the *-variables.css file
+3. Stadium 6.12+ users can comment out any variable they do **not** want to customise
+4. Add the [*split-buttons-variables.css*](split-buttons-variables.css) to the "CSS" folder in the EmbeddedFiles (overwrite)
+5. Paste the link tag below into the *head* property of your application (if you don't already have it there)
+```html
+<link rel="stylesheet" href="{EmbeddedFiles}/CSS/split-buttons-variables.css">
+``` 
+6. Add the file to the "CSS" inside of your Embedded Files in your application
 
-## CSS Upgrading
-To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)
+**NOTE: Do not change any of the CSS in the 'split-buttons.css' file**
+
+## Upgrading Stadium Repos
+Stadium Repos are not static. They change as additional features are added and bugs are fixed. Using the right method to work with Stadium Repos allows for upgrading them in a controlled manner. 
+
+How to use and update application repos is described here: [Working with Stadium Repos](https://github.com/stadium-software/samples-upgrading)
