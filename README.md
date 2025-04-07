@@ -7,6 +7,8 @@ https://github.com/stadium-software/split-button/assets/2085324/a666038d-8107-4a
 ## Version 
 1.1 - [Added display option under dropdown via additional class](#display-options)
 
+1.2 Removed display-right option; Updated readme for 6.12+; Converted px to rem
+
 # Setup
 
 ## Application Setup
@@ -15,9 +17,9 @@ https://github.com/stadium-software/split-button/assets/2085324/a666038d-8107-4a
 ## Global Script Setup
 1. Create a Global Script called "SplitButtons"
 3. Drag a *JavaScript* action into the script
-4. Add the Javascript below into the JavaScript code property
+4. Add the Javascript below unchanged into the JavaScript code property
 ```javascript
-/* Stadium Script Version 1.1 https://github.com/stadium-software/split-button */
+/* Stadium Script Version 1.2 https://github.com/stadium-software/split-button */
 initSplitButtons();
 function initSplitButtons() {
     let splitbuttons = document.querySelectorAll(".stadium-split-button");
@@ -27,10 +29,6 @@ function initSplitButtons() {
         let options = splitbuttons[i].querySelectorAll(".drop-down-container select option");
         let ddContainer = document.createElement("div");
         ddContainer.classList.add("split-options");
-        if (splitbuttons[i].classList.contains("display-under")) {
-            ddContainer.style.left = "unset";
-            ddContainer.style.right = "0";
-        }
         for (let j = 0; j < options.length; j++) {
             let option = document.createElement("div");
             option.classList.add("split-option");
@@ -114,6 +112,7 @@ The CSS below is required for the correct functioning of the module. Some elemen
 1. Open the CSS file called [*split-buttons-variables.css*](split-buttons-variables.css) from this repo
 2. Adjust the variables in the *:root* element as you see fit
 3. Overwrite the file in the CSS folder of your application with the customised file
+4. Do not change any CSS other than the variables provided in the *-variables.css file
 
 ## CSS Upgrading
 To upgrade the CSS in this module, follow the [steps outlined in this repo](https://github.com/stadium-software/samples-upgrading)

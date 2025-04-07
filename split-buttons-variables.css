@@ -1,7 +1,7 @@
 /* Stadium CSS v1.1 https://github.com/stadium-software/split-button */
 :root {
-    --stadium-split-button-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-    --stadium-split-button-hover-box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+    --stadium-split-button-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23);
+    --stadium-split-button-hover-box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.19), 0 0.6rem 0.6rem rgba(0, 0, 0, 0.23);
     --stadium-split-button-separator-line-color: white;
     --stadium-split-button-icon: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im0yNCAxMmwtOCAxMGwtOC0xMHoiLz48L3N2Zz4=');
     --stadium-split-button-background-color: #3399ff;
@@ -9,5 +9,5 @@
     --stadium-split-button-border-color: #2196f3;
     --stadium-split-button-options-background-color: white;
     --stadium-split-button-options-hover-background-color: #f9f9f9;
-    --stadium-split-button-options-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    --stadium-split-button-options-box-shadow: 0 0.3rem 0.6rem rgba(0, 0, 0, 0.16), 0 0.3rem 0.6rem rgba(0, 0, 0, 0.23);
 }

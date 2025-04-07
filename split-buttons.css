@@ -1,6 +1,6 @@
 /* Stadium CSS v1.1 https://github.com/stadium-software/split-button */
 .stadium-split-button {
-    padding-right: 16px;
+    padding-right: 1.6rem;
 
     .button-container {
 
@@ -11,7 +11,7 @@
         justify-items: stretch;
         box-shadow: var(--stadium-split-button-box-shadow, var(--BUTTON-BOX-SHADOW));
         background-color: var(--stadium-split-button-background-color, var(--BUTTON-BACKGROUND-COLOR));
-        border-radius: 3px;
+        border-radius: 0.3rem;
 
         :hover:not(.split-option) {
             box-shadow: var(--stadium-split-button-hover-box-shadow, var(--BUTTON-HOVER-BOX-SHADOW));
@@ -19,7 +19,7 @@
 
         button {
             box-shadow: none;
-            border-right: 1px solid var(--stadium-split-button-separator-line-color, var(--BODY-BACKGROUND-COLOR));
+            border-right: 0.1rem solid var(--stadium-split-button-separator-line-color, var(--BODY-BACKGROUND-COLOR));
         }
     }
 
@@ -27,12 +27,12 @@
         background-image: var(--stadium-split-button-icon, url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMzIgMzIiPjxwYXRoIGZpbGw9IiNmZmZmZmYiIGQ9Im0yNCAxMmwtOCAxMGwtOC0xMHoiLz48L3N2Zz4='));
         background-repeat: no-repeat;
         background-position: center;
-        background-size: 16px;
+        background-size: 1.6rem;
         border-color: var(--stadium-split-button-border-color, var(--BUTTON-BORDER-COLOR));
-        padding-right: 20px;
+        padding-right: 2rem;
         cursor: pointer;
-        border-top-right-radius: 3px;
-        border-bottom-right-radius: 3px;
+        border-top-right-radius: 0.3rem;
+        border-bottom-right-radius: 0.3rem;
         position: relative;
     }
 
@@ -45,25 +45,27 @@
         top: 96%;
         width: fit-content;
         text-wrap: nowrap;
-        left: calc(100% - 20px);
+        right: 0;
         display: none;
-        background-color: var(--stadium-split-button-options-background-color, var(--LIGHT-GREY));
-        border-radius: 3px;
+        background-color: var(--stadium-split-button-options-background-color, var(--BUTTON-HOVER-BACKGROUND-COLOR));
+        border-radius: 0.3rem;
         flex-direction: column;
-        padding: 6px 0;
-        border-bottom-right-radius: 6px;
-        border-bottom-left-radius: 6px;
-        border-top-right-radius: 6px;
+        padding: 0.6rem 0;
+        border-bottom-right-radius: 0.6rem;
+        border-bottom-left-radius: 0.6rem;
+        border-top-right-radius: 0.6rem;
 
     }
 
     .split-option {
         cursor: pointer;
-        padding: 4px 8px;
+        padding: 0.4rem 0.8rem;
+        color: var(--BUTTON-TEXT-COLOR, #333);
     }
 
     .split-option:hover {
-        background-color: var(--stadium-split-button-options-hover-background-color, var(--LIGHT-GREY));
+        background-color: var(--stadium-split-button-options-hover-background-color, var(--BUTTON-BACKGROUND-COLOR));
+        color: var(--BUTTON-TEXT-COLOR, #333);
     }
 
     .drop-down-container {
@@ -74,4 +76,8 @@
 .stadium-split-button.expanded .split-options {
     box-shadow: var(--stadium-split-button-options-box-shadow, var(--BUTTON-HOVER-BOX-SHADOW));
     display: flex;
+}
+html {
+    min-height: 100%;
+    font-size: 62.5%;
 }
